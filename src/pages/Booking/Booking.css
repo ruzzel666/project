@@ -1,0 +1,118 @@
+.booking-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 64px 16px 48px 16px;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 32px rgba(60, 60, 60, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.booking-title {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #232326;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.booking-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.2rem;
+}
+
+.booking-label {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 1.08rem;
+  color: #232326;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.booking-select, .booking-input {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 1.1rem;
+  padding: 14px 18px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 16px;
+  background: #fafbfc;
+  color: #232326;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.booking-select:focus, .booking-input:focus {
+  border: 1.5px solid #a78bfa;
+  box-shadow: 0 0 0 2px #a78bfa33;
+}
+
+.booking-btn {
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  background: linear-gradient(90deg, #a78bfa 0%, #7c3aed 100%);
+  color: #fff;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 1.18rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 24px;
+  padding: 16px 48px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.10);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  display: block;
+}
+.booking-btn:hover {
+  background: linear-gradient(90deg, #7c3aed 0%, #a78bfa 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.booking-info {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 1rem;
+  color: #888;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.booking-bg {
+  min-height: 100vh;
+  width: 100vw;
+  background: url('../../img/oblojka.jpg') no-repeat right center/cover, #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.booking-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.65);
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .booking-container {
+    padding: 32px 4px 24px 4px;
+    border-radius: 12px;
+  }
+  .booking-title {
+    font-size: 1.3rem;
+  }
+  .booking-btn {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+} 

@@ -1,0 +1,212 @@
+.labelage-hero {
+  position: relative;
+  min-height: 80vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2vw;
+  box-sizing: border-box;
+}
+
+.labelage-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(50, 50, 50, 0.7);
+  z-index: 1;
+}
+
+.labelage-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 0 60px 0;
+}
+
+.labelage-hero-title {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.01em;
+}
+
+.labelage-yellow {
+  color: #ffe066;
+  font-weight: 700;
+}
+
+.labelage-hero-subtitle {
+  font-size: 1.3rem;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  color: #eaeaea;
+  margin-bottom: 3.5rem;
+  font-weight: 400;
+}
+
+.labelage-hero-arrow {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: arrow-bounce 1.5s infinite;
+}
+
+@keyframes arrow-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(12px); }
+}
+
+@media (max-width: 900px) {
+  .labelage-hero-title {
+    font-size: 2.1rem;
+  }
+  .labelage-hero-content {
+    padding: 60px 0 40px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .labelage-hero-title {
+    font-size: 1.3rem;
+  }
+  .labelage-hero-content {
+    padding: 40px 0 24px 0;
+  }
+  .labelage-hero-subtitle {
+    font-size: 1rem;
+  }
+}
+
+.labelage-products-section {
+  background: #f5f5f5;
+  padding: 64px 0 64px 0;
+  text-align: center;
+}
+
+.labelage-products-title {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #181818;
+  margin-bottom: 48px;
+}
+
+.labelage-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.labelage-product-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(60,60,60,0.10);
+  padding: 32px 24px 32px 24px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  height: 100%;
+  min-height: 480px;
+  box-sizing: border-box;
+}
+.labelage-product-card:hover {
+  box-shadow: 0 8px 32px rgba(60,60,60,0.16);
+  transform: translateY(-4px) scale(1.03);
+}
+.labelage-product-img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  margin-bottom: 32px;
+  border-radius: 4px;
+  background: #fff;
+}
+.labelage-product-desc {
+  text-align: left;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.labelage-product-name {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 1.18rem;
+  font-weight: 500;
+  color: #181818;
+  margin-bottom: 32px;
+  line-height: 1.35;
+  text-align: left;
+}
+.labelage-product-btn {
+  background: #181818;
+  color: #fff;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 28px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  margin: 24px auto 0 auto;
+  display: block;
+  min-width: 0;
+  width: auto;
+  box-shadow: none;
+  text-align: center;
+}
+.labelage-product-btn:hover {
+  background: #ffe066;
+  color: #181818;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.labelage-product-btn-center {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .labelage-products-grid {
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+@media (max-width: 700px) {
+  .labelage-products-title {
+    font-size: 1.5rem;
+  }
+  .labelage-products-section {
+    padding: 32px 0 32px 0;
+  }
+  .labelage-products-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .labelage-product-card {
+    padding: 18px 8px 18px 8px;
+    min-width: 0;
+    min-height: 340px;
+  }
+  .labelage-product-img {
+    max-width: 90vw;
+  }
+} 
