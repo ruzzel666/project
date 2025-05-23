@@ -2,6 +2,16 @@ import React, { useState } from 'react';
 import './Labelage.css';
 import ProductModal from './ProductModal';
 
+import img1 from '../img/Screenshot-from-2022-10-17-14-48-23-e1666011179370-1024x681.png';
+import img2 from '../img/krem-na-noc-e1666011220431-1024x773.jpg';
+import img3 from '../img/krem-pod-oko-e1666011327511-1024x743.jpg';
+import img4 from '../img/serum-e.jpg';
+import img5 from '../img/ultraintensywna-maseczka-do-twarzy-e1666011519786-1024x780.jpg';
+import img6 from '../img/tonik.jpg';
+import img7 from '../img/gele-dly-kogi.jpg';
+import img8 from '../img/maseczka-1024x842.png';
+import img9 from '../img/maslo-1024x861.png';
+
 export default function Labelage() {
   // Кастомная плавная прокрутка
   function smoothScrollTo(targetY, duration = 1200) {
@@ -61,42 +71,42 @@ export default function Labelage() {
         <h2 className="labelage-products-title">Откройте для себя мир красоты</h2>
         <div className="labelage-products-grid">
           <div className="labelage-product-card">
-            <img src="%PUBLIC_URL%/img/Screenshot-from-2022-10-17-14-48-23-e1666011179370-1024x681.png" alt="Дневной крем L'abelage" className="labelage-product-img" />
+            <img src={img1} alt="Дневной крем L'abelage" className="labelage-product-img" />
             <div className="labelage-product-desc">
               <div className="labelage-product-name">Дневной крем против морщин с черной икрой, золотом, жемчужным порошком и жетоном, 50 мл</div>
               <button className="labelage-product-btn" onClick={openModal1}>Read more</button>
             </div>
           </div>
           <div className="labelage-product-card">
-            <img src="%PUBLIC_URL%/img/krem-na-noc-e1666011220431-1024x773.jpg" alt="Восстанавливающий ночной крем L'abelage" className="labelage-product-img" />
+            <img src={img2} alt="Восстанавливающий ночной крем L'abelage" className="labelage-product-img" />
             <div className="labelage-product-desc">
               <div className="labelage-product-name">Восстанавливающий ночной крем с черной икрой, золотом, жемчужным порошком и стволовыми клетками, 50 мл</div>
               <button className="labelage-product-btn" onClick={openModal2}>Read more</button>
             </div>
           </div>
           <div className="labelage-product-card">
-            <img src="%PUBLIC_URL%/img/krem-pod-oko-e1666011327511-1024x743.jpg" alt="Крем для глаз и шеи L'abelage" className="labelage-product-img" />
+            <img src={img3} alt="Крем для глаз и шеи L'abelage" className="labelage-product-img" />
             <div className="labelage-product-desc">
               <div className="labelage-product-name">Восстанавливающий крем для глаз и шеи с черной икрой, золотом, жемчужным порошком и экстрактом зеленого чая, 50 мл</div>
               <button className="labelage-product-btn" onClick={openModal3}>Read more</button>
             </div>
           </div>
           <div className="labelage-product-card">
-            <img src="%PUBLIC_URL%/img/serum-e.jpg" alt="Сыворотка против морщин L'abelage" className="labelage-product-img" />
+            <img src={img4} alt="Сыворотка против морщин L'abelage" className="labelage-product-img" />
             <div className="labelage-product-desc">
               <div className="labelage-product-name">Сыворотка против морщин с черной икрой, золотом, жемчужным порошком и минералами Мертвого моря, 50 мл</div>
               <button className="labelage-product-btn" onClick={openModal4}>Read more</button>
             </div>
           </div>
           <div className="labelage-product-card">
-            <img src="%PUBLIC_URL%/img/ultraintensywna-maseczka-do-twarzy-e1666011519786-1024x780.jpg" alt="Интенсивная маска для лица L'abelage" className="labelage-product-img" />
+            <img src={img5} alt="Интенсивная маска для лица L'abelage" className="labelage-product-img" />
             <div className="labelage-product-desc">
               <div className="labelage-product-name">Интенсивная маска для лица с черной икрой, золотом, жемчужным порошком и стволовыми клетками, 50 мл</div>
               <div className="labelage-product-btn-center"><button className="labelage-product-btn" onClick={openModal5}>Read more</button></div>
             </div>
           </div>
           <div className="labelage-product-card">
-            <img src="%PUBLIC_URL%/img/tonik.jpg" alt="Интенсивно очищающий тоник L'abelage" className="labelage-product-img" />
+            <img src={img6} alt="Интенсивно очищающий тоник L'abelage" className="labelage-product-img" />
             <div className="labelage-product-desc">
               <div className="labelage-product-name">Интенсивно очищающий тоник с ромашкой и алоэ, 100 мл</div>
               <div className="labelage-product-btn-center"><button className="labelage-product-btn" onClick={openModal6}>Read more</button></div>
@@ -104,21 +114,21 @@ export default function Labelage() {
           </div>
           {/* Ещё 3 товара */}
           <div className="labelage-product-card">
-            <img src="%PUBLIC_URL%/img/gele-dly-kogi.jpg" alt="Глубоко очищающий гель для кожи лица L'abelage" className="labelage-product-img" />
+            <img src={img7} alt="Глубоко очищающий гель для кожи лица L'abelage" className="labelage-product-img" />
             <div className="labelage-product-desc">
               <div className="labelage-product-name">Глубоко очищающий гель для кожи лица с Розой и огурцом, 100 мл</div>
               <div className="labelage-product-btn-center"><button className="labelage-product-btn" onClick={openModal7}>Read more</button></div>
             </div>
           </div>
           <div className="labelage-product-card">
-            <img src="%PUBLIC_URL%/img/maseczka-1024x842.png" alt="Интенсивная отшелушивающая маска L'abelage" className="labelage-product-img" />
+            <img src={img8} alt="Интенсивная отшелушивающая маска L'abelage" className="labelage-product-img" />
             <div className="labelage-product-desc">
               <div className="labelage-product-name">Интенсивная отшелушивающая маска с фруктовыми кислотами, 50 мл</div>
               <div className="labelage-product-btn-center"><button className="labelage-product-btn" onClick={openModal8}>Read more</button></div>
             </div>
           </div>
           <div className="labelage-product-card">
-            <img src="%PUBLIC_URL%/img/maslo-1024x861.png" alt="Восстанавливающий увлажняющий лосьон для тела L'abelage" className="labelage-product-img" />
+            <img src={img9} alt="Восстанавливающий увлажняющий лосьон для тела L'abelage" className="labelage-product-img" />
             <div className="labelage-product-desc">
               <div className="labelage-product-name">Восстанавливающий увлажняющий лосьон для тела с черной икрой, золотом, жемчужным порошком и слизью улитки, 120 мл</div>
               <div className="labelage-product-btn-center"><button className="labelage-product-btn" onClick={openModal9}>Read more</button></div>

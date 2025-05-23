@@ -2,6 +2,10 @@ import React from 'react';
 import './About.css';
 import { Link } from 'react-router-dom';
 
+import aboutImg1 from '../img/wwa-120-scaled.jpg';
+import aboutImg2 from '../img/wwa-113-scaled-pwdznmqo7of8wl0f7r86kbc8xrg3t8o2u9ixpa4ef4.jpg';
+import aboutImg3 from '../img/wwa-140-scaled.jpg';
+
 function About() {
   return (
     <div className="about-tilda">
@@ -14,9 +18,9 @@ function About() {
           </div>
         </div>
         <div className="about-gallery-tilda">
-          <img src="%PUBLIC_URL%/img/wwa-120-scaled.jpg" alt="Косметолог" className="about-gallery-img-tilda" />
-          <img src="%PUBLIC_URL%/img/wwa-113-scaled-pwdznmqo7of8wl0f7r86kbc8xrg3t8o2u9ixpa4ef4.jpg" alt="Здание" className="about-gallery-img-tilda" />
-          <img src="%PUBLIC_URL%/img/wwa-140-scaled.jpg" alt="Персонал" className="about-gallery-img-tilda" />
+          <img src={aboutImg1} alt="Косметолог" className="about-gallery-img-tilda" />
+          <img src={aboutImg2} alt="Здание" className="about-gallery-img-tilda" />
+          <img src={aboutImg3} alt="Персонал" className="about-gallery-img-tilda" />
         </div>
         <div className="about-main-tilda">
           <div className="about-main-text-tilda">
