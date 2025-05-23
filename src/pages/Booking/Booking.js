@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Booking.css';
+import oblojkaBackground from '../img/oblojka.jpg';
 
 const SERVICES = [
   'Лечение иннари',
@@ -66,7 +67,7 @@ export default function Booking() {
   };
 
   return (
-    <div className="booking-bg">
+    <div className="booking-bg" style={{ backgroundImage: `url(${oblojkaBackground})` }}>
       <div className="booking-container">
         <h1 className="booking-title">Запишитесь на услугу прямо сейчас</h1>
         <form className="booking-form" onSubmit={handleSubmit}>
