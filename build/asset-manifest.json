@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/project/static/css/main.090d6b42.css",
+    "main.js": "/project/static/js/main.2624121f.js",
+    "static/js/453.91136c4d.chunk.js": "/project/static/js/453.91136c4d.chunk.js",
+    "static/media/smiling-woman-with-h.jpg": "/project/static/media/smiling-woman-with-h.b7245fcfaa0bdf4c0e14.jpg",
+    "static/media/oblojka.jpg": "/project/static/media/oblojka.4e39c80ae085b38752a5.jpg",
+    "index.html": "/project/index.html",
+    "main.090d6b42.css.map": "/project/static/css/main.090d6b42.css.map",
+    "main.2624121f.js.map": "/project/static/js/main.2624121f.js.map",
+    "453.91136c4d.chunk.js.map": "/project/static/js/453.91136c4d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.090d6b42.css",
+    "static/js/main.2624121f.js"
+  ]
+}
