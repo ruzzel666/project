@@ -89,7 +89,7 @@
 .booking-bg {
   min-height: 100vh;
   width: 100vw;
-  background: url('../../img/oblojka.jpg') no-repeat right center/cover, #fff;
+  background: url('/img/oblojka.jpg') no-repeat right center/cover, #fff;
   display: flex;
   align-items: center;
   justify-content: center;
