@@ -2,16 +2,6 @@ import React, { useState } from 'react';
 import './Labelage.css';
 import ProductModal from './ProductModal';
 
-import img1 from '../img/Screenshot-from-2022-10-17-14-48-23-e1666011179370-1024x681.png';
-import img2 from '../img/krem-na-noc-e1666011220431-1024x773.jpg';
-import img3 from '../img/krem-pod-oko-e1666011327511-1024x743.jpg';
-import img4 from '../img/serum-e.jpg';
-import img5 from '../img/ultraintensywna-maseczka-do-twarzy-e1666011519786-1024x780.jpg';
-import img6 from '../img/tonik.jpg';
-import img7 from '../img/gele-dly-kogi.jpg';
-import img8 from '../img/maseczka-1024x842.png';
-import img9 from '../img/maslo-1024x861.png';
-
 export default function Labelage() {
   // Кастомная плавная прокрутка
   function smoothScrollTo(targetY, duration = 1200) {
