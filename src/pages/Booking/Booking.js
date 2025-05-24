@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { createBooking } from '../../services/api';
 import './Booking.css';
-import oblojkaBackground from '../img/oblojka.jpg';
+import oblojkaBackground from '../../img/oblojka.jpg';
 
 const SERVICES = [
   'Лечение иннари',
@@ -50,26 +51,46 @@ export default function Booking() {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Здесь может быть отправка данных на сервер
-    setSuccess(true);
-    // Очистка формы (по желанию)
-    setService('');
-    setName('');
-    setPhone('');
-    setEmail('');
-    setDate('');
-    setTime('');
-    // Скрыть сообщение через 4 секунды (по желанию)
-    setTimeout(() => setSuccess(false), 4000);
+    setLoading(true);
+    setError(null);
+    setSuccess(false);
+
+    try {
+      const bookingData = {
+        clientName: name,
+        phone: phone,
+        email: email,
+        serviceId: service,
+        date: date,
+        time: time
+      };
+
+      await createBooking(bookingData);
+      setSuccess(true);
+      // Очистка формы
+      setService('');
+      setName('');
+      setPhone('');
+      setEmail('');
+      setDate('');
+      setTime('');
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div className="booking-bg" style={{ backgroundImage: `url(${oblojkaBackground})` }}>
       <div className="booking-container">
         <h1 className="booking-title">Запишитесь на услугу прямо сейчас</h1>
+        {error && <div className="error-message">{error}</div>}
         <form className="booking-form" onSubmit={handleSubmit}>
           <label className="booking-label">
             Выберите услугу
@@ -98,7 +119,9 @@ export default function Booking() {
             Время посещения
             <input className="booking-input" type="time" value={time} onChange={e => setTime(e.target.value)} required />
           </label>
-          <button className="booking-btn" type="submit">Записаться</button>
+          <button className="booking-btn" type="submit" disabled={loading}>
+            {loading ? 'Отправка...' : 'Записаться'}
+          </button>
         </form>
         {success && (
           <div className="booking-info" style={{ color: '#22c55e', fontWeight: 600 }}>

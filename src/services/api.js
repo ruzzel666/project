@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://salon-backend-n413.onrender.com/api';
 
 // Запись на услугу
 export const createBooking = async (bookingData) => {
